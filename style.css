@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Dhurjati&family=Ramaraja&display=swap");
+
+body {
+  font-family: "Ramaraja", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  background-color: rgb(230, 201, 163);
+  position: relative;
+}
+h3 {
+  color: #6501de;
+  text-shadow: rgba(0, 255, 162, 0.93) 0px 0px 39px;
+  /* text-shadow: 0px 9px 8px #ce5937; */
+}
+h2 {
+  text-shadow: 0px 9px 8px #ce5937;
+  color: #111;
+}
+.nav-link {
+  letter-spacing: 1.2px;
+  font-size: 1.2rem;
+}
+.heading {
+  text-shadow: 0px 10px 8px #6e6e6a;
+  letter-spacing: 5px;
+  color: #043776;
+}
+.logo {
+  width: 48px;
+  height: 48px;
+}
+.hero-img-sm {
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px fade(rgb(247, 242, 242), 80%);
+}
+.hero-img {
+  width: 180px;
+  height: 200px;
+  border-radius: 10%;
+}
+.hero-img:hover {
+  color: #111;
+  background: goldenrod;
+  box-shadow: 0 0 100px goldenrod;
+}
+a {
+  text-decoration: none;
+}
+.caption {
+  font-size: 18px;
+}
+.docs {
+  border-radius: 25px;
+  margin-top: 20px;
+  text-align: justify;
+  line-height: 25px;
+  padding: 25px 25px;
+  font-size: 1.2rem;
+  /* margin-top: 100px; */
+}
+
+.scrolltop {
+  font-size: 15px;
+}
+#the-canvas {
+  border: 1px solid black;
+  direction: ltr;
+}
+.box {
+  background: white;
+  padding: 16px 24px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
+}
+.box::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9) translateZ(0);
+  filter: blur(15px);
+  background: linear-gradient(to left, #ff5770, #e4428d, #c42da8, #9e16c3, #6501de, #9e16c3, #c42da8, #e4428d, #ff5770);
+  background-size: 200% 200%;
+  -webkit-animation: animateGlow 1.25s linear infinite;
+  animation: animateGlow 1.25s linear infinite;
+}
+
+@-webkit-keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.body:after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-conic-gradient(from 0 at 100% 100%, rgba(134, 130, 130, 0.7) 0% 2deg, transparent 0 9deg),
+    radial-gradient(circle 150px at 100% 100%, white, yellow, lightyellow, rgb(237, 192, 133));
+  background-color: #2eb5e5;
+  background-position: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sun {
+  width: 200px;
+  height: 200px;
+  background-color: #5c5c52;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+  animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+}
+
+@keyframes sunrise {
+  0% {
+    box-shadow: none;
+  }
+}
+
+@keyframes rays {
+  0% {
+    box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
+  }
+  100% {
+    box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000,
+      0 0 40px 100px #ffde0010;
+  }
+}
