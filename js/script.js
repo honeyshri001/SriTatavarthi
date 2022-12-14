@@ -24,23 +24,6 @@ $.getJSON(jsonFilePath, {
     //alert(textStatus);
   });
 
-/*
-$.getJSON(jsonFilePath, function (data) {
-  var itmShatam = [];
-  var itmAvadanam = [];
-
-  $.each(data.data, function (key, val) {
-    if (val.type === 1) itmShatam.push(template1(val, key));
-    if (val.type === 2) itmAvadanam.push(template1(val, key));
-  });
-
-  var divShatam = $("#divShatam");
-  divShatam.html(itmShatam.join(""));
-
-  var divAvadanam = $("#divAvadanam");
-  divAvadanam.append(itmAvadanam.join(""));
-});
-*/
 function template1(elem, key) {
   var str = "";
   str = '<div class="col-12 col-md-4 col-lg-3 col-sm-6 g-2">';
@@ -83,3 +66,28 @@ function template1(elem, key) {
 
   return str;
 }
+
+const scrollTop = function () {
+  const scrollBtn = document.createElement("button");
+  scrollBtn.innerHTML = "&uarr;";
+  scrollBtn.setAttribute("id", "scroll-btn");
+  document.body.appendChild(scrollBtn);
+
+  const scrollBtnDisplay = function () {
+    window.scrollY > window.innerHeight ? scrollBtn.classList.add("show") : scrollBtn.classList.remove("show");
+  };
+  window.addEventListener("scroll", scrollBtnDisplay);
+
+  const scrollWindow = function () {
+    // if (window.scrollY != 0) {
+    //   setTimeout(function () {
+    //     window.scrollTo(0, window.scrollY - 350);
+    //     scrollWindow();
+    //   }, 10);
+    // }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+  scrollBtn.addEventListener("click", scrollWindow);
+};
+scrollTop();
