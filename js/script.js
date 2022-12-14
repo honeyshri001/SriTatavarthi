@@ -1,5 +1,30 @@
-var jsonFilePath = "https://drive.google.com/file/d/13i9MJDaxYJ7-U_R4x-uYqSXF4wACDY_J/view?format=jsonp&jsonp="; //../data/data.json
+//var jsonFilePath = "https://drive.google.com/file/d/13i9MJDaxYJ7-U_R4x-uYqSXF4wACDY_J/view"; //../data/data.json
+var jsonFilePath = "../data/data.json";
 
+$.getJSON(jsonFilePath, {
+  format: "json",
+})
+  .done(function (data) {
+    var itmShatam = [];
+    var itmAvadanam = [];
+
+    $.each(data.data, function (key, val) {
+      if (val.type === 1) itmShatam.push(template1(val, key));
+      if (val.type === 2) itmAvadanam.push(template1(val, key));
+    });
+
+    var divShatam = $("#divShatam");
+    divShatam.html(itmShatam.join(""));
+
+    var divAvadanam = $("#divAvadanam");
+    divAvadanam.append(itmAvadanam.join(""));
+  })
+  .fail(function (xhr, textStatus, errorThrown) {
+    //alert(xhr.responseText);
+    //alert(textStatus);
+  });
+
+/*
 $.getJSON(jsonFilePath, function (data) {
   var itmShatam = [];
   var itmAvadanam = [];
@@ -15,7 +40,7 @@ $.getJSON(jsonFilePath, function (data) {
   var divAvadanam = $("#divAvadanam");
   divAvadanam.append(itmAvadanam.join(""));
 });
-
+*/
 function template1(elem, key) {
   var str = "";
   str = '<div class="col-12 col-md-4 col-lg-3 col-sm-6 g-2">';
