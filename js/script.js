@@ -37,10 +37,11 @@ function template1(elem, key) {
   var str = "";
   str = '<div class="col-12 col-md-4 col-lg-3 col-sm-6 g-2">';
   str += '<div class="card img-thumbnail">';
-  str += '<iframe src="' + elem.url + '" title="YouTube video player"';
-  str += 'frameborder="0"';
-  str += 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"';
-  str += "allowfullscreen></iframe>";
+  // str += '<iframe src="' + elem.url + '" title="YouTube video player"';
+  // str += 'frameborder="0"';
+  // str += 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"';
+  // str += "allowfullscreen></iframe>";
+  str += "<object loading='lazy' data=" + elem.url + "></object>";
   str += '<div class="card-body">';
   str +=
     '<h5 class="card-title">' +
@@ -66,7 +67,8 @@ function template1(elem, key) {
     str += '    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>';
     str += "</div>";
     str += '<div class="modal-body">';
-    str += '   <iframe loading="lazy" src="' + elem.pdf + '" width="100%" height="600px"></iframe>';
+    //str += '   <iframe loading="lazy" src="' + elem.pdf + '" width="100%" height="600px"></iframe>';
+    str += "<object loading='lazy'  data=" + elem.url + "></object>";
     str += "</div>";
     str += "</div>";
     str += "</div>";

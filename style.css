@@ -4,8 +4,10 @@ body {
   font-family: "Ramaraja", sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
-  background-color: rgb(246, 200, 143);
-  position: relative;
+  background-color: #f6c88fb4;
+}
+h1 {
+  font-size: clamp(3rem, 12vm + 1.25rem, 12rem);
 }
 h3 {
   color: #6501de;
@@ -72,8 +74,8 @@ a {
   color: #fff;
   background-color: #ef476f;
   position: fixed;
-  bottom: 2%;
-  right: 2%;
+  bottom: 0%;
+  right: 48%;
   border: 2px solid #fff;
   border-radius: 50%;
   font: bold 20px monospace;
@@ -145,7 +147,7 @@ a {
 .sun {
   width: 200px;
   height: 200px;
-  /* background-color: #ffde00; */
+  background-color: #ffae00;
   border-radius: 50%;
   box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
   animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
