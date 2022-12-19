@@ -40,6 +40,12 @@ h2 {
   height: 180px;
   border-radius: 10%;
 }
+.hero {
+  border: 0px solid red;
+  background: rgb(245, 245, 245);
+  background: radial-gradient(circle, rgba(245, 245, 245, 1) 20%, rgba(248, 216, 175, 1) 20%);
+  padding-top: 4.5rem !important;
+}
 .hero-img1:hover {
   color: #111;
   background: goldenrod;
@@ -72,7 +78,7 @@ a {
   /* background-color: #ef476f; */
   background-color: #daa520;
   position: fixed;
-  bottom: 0%;
+  bottom: 2%;
   right: 46%;
   border: 2px solid rgb(247, 162, 5);
   border-radius: 50%;
@@ -145,7 +151,7 @@ a {
 .sun {
   width: 200px;
   height: 200px;
-  background-color: #ffde0080;
+  background-color: #ffde00;
   border-radius: 50%;
   box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
   animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
@@ -159,7 +165,7 @@ a {
 
 @keyframes rays {
   0% {
-    box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffc4005b, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
+    box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
   }
   100% {
     box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000,
