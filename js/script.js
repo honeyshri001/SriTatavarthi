@@ -82,6 +82,7 @@ const scrollTop = function () {
   const scrollBtn = document.createElement("button");
   scrollBtn.innerHTML = "&uarr;";
   scrollBtn.setAttribute("id", "scroll-btn");
+  scrollBtn.setAttribute("class", "btn text-white btn-floating m-1");
   document.body.appendChild(scrollBtn);
 
   const scrollBtnDisplay = function () {
