@@ -6,9 +6,6 @@ body {
   letter-spacing: 0.2px;
   background-color: #f6c88fb4;
 }
-h1 {
-  font-size: clamp(3rem, 12vm + 1.25rem, 12rem);
-}
 h3 {
   color: #6501de;
   text-shadow: rgba(0, 255, 162, 0.93) 0px 0px 39px;
@@ -43,7 +40,7 @@ h2 {
   height: 180px;
   border-radius: 10%;
 }
-.hero-img:hover {
+.hero-img1:hover {
   color: #111;
   background: goldenrod;
   box-shadow: 0 0 100px goldenrod;
@@ -72,17 +69,18 @@ a {
   width: 40px;
   height: 40px;
   color: #fff;
-  background-color: #ef476f;
+  /* background-color: #ef476f; */
+  background-color: #daa520;
   position: fixed;
   bottom: 0%;
-  right: 48%;
-  border: 2px solid #fff;
+  right: 46%;
+  border: 2px solid rgb(247, 162, 5);
   border-radius: 50%;
   font: bold 20px monospace;
   transition: opacity 0.5s, transform 0.5s;
 }
 #scroll-btn.show {
-  opacity: 1;
+  opacity: 0.8;
   transition: opacity 1s, transform 1s;
 }
 
@@ -147,7 +145,7 @@ a {
 .sun {
   width: 200px;
   height: 200px;
-  background-color: #ffae00;
+  background-color: #ffde0080;
   border-radius: 50%;
   box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
   animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
@@ -161,7 +159,7 @@ a {
 
 @keyframes rays {
   0% {
-    box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
+    box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffc4005b, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
   }
   100% {
     box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000,
