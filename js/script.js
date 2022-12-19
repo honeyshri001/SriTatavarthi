@@ -1,3 +1,12 @@
+/* const navLinks = document.querySelectorAll(".nav-item");
+const menuToggle = document.getElementById("navbarSupportedContent");
+const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+navLinks.forEach((l) => {
+  l.addEventListener("click", () => {
+    bsCollapse.toggle();
+  });
+}); */
+
 //var jsonFilePath = "https://drive.google.com/file/d/13i9MJDaxYJ7-U_R4x-uYqSXF4wACDY_J/view"; //../data/data.json
 var jsonFilePath = "../data/data.json";
 
