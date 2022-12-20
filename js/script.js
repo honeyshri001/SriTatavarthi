@@ -51,7 +51,9 @@ function template1(elem, key) {
     //   : "");
     elem.title +
     (elem.pdf != ""
-      ? ' <i data-bs-toggle="modal" style="cursor: pointer;color:rgb(166, 77, 77)" data-bs-target="#myModal' + key + '" class="fas fa-file-pdf"></i>'
+      ? ' <i data-mdb-toggle="modal" style="cursor: pointer;color:rgb(166, 77, 77)" data-mdb-target="#myModal' +
+        key +
+        '" class="fas fa-file-pdf"></i>'
       : "");
   str += '</h5><p class="card-text">' + elem.desc + "</p>";
   str += "</div>";
@@ -64,11 +66,11 @@ function template1(elem, key) {
     str += '<div class="modal-content">';
     str += '  <div class="modal-header">';
     str += '     <h5 class="modal-title">' + elem.title + "<br/>" + elem.desc + "</h5>";
-    str += '    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>';
+    str += '    <button type="button" class="btn-close" data-mdb-dismiss="modal"></button>';
     str += "</div>";
     str += '<div class="modal-body">';
-    //str += '   <iframe loading="lazy" src="' + elem.pdf + '" width="100%" height="600px"></iframe>';
-    str += "<object loading='lazy'  data=" + elem.url + "></object>";
+    str += '   <iframe loading="lazy" src="' + elem.pdf + '" width="100%" height="600px"></iframe>';
+    //str += "<object loading='lazy'  data=" + elem.url + "></object>";
     str += "</div>";
     str += "</div>";
     str += "</div>";
