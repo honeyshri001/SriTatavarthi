@@ -86,7 +86,8 @@ scrollTop();
 
 function viewPDF(title, pdf) {
   //let url = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://honeyshri001.github.io/SriTatavarthi/" + pdf;
-  let url = pdf;
+
+  let url = "https://drive.google.com/viewerng/viewer?embedded=true&url=" + encodeURIComponent("https://honeyshri001.github.io/SriTatavarthi/" + pdf);
 
   let iframe = document.getElementById("pdfViewer");
   let pdftitle = document.getElementById("pdfviewerTitle");
