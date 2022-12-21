@@ -34,48 +34,32 @@ $.getJSON(jsonFilePath, {
   });
 
 function template1(elem, key) {
+  var obj = {
+    title: elem.title,
+    pdf: elem.pdf,
+  };
   var str = "";
   str = '<div class="col-12 col-md-4 col-lg-3 col-sm-6 g-2">';
   str += '<div class="card img-thumbnail">';
-  // str += '<iframe src="' + elem.url + '" title="YouTube video player"';
-  // str += 'frameborder="0"';
-  // str += 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"';
-  // str += "allowfullscreen></iframe>";
   str += "<object loading='lazy' data=" + elem.url + "></object>";
-  str += '<div class="card-body">';
+  str += '<div class="card-body p-2">';
+  str += '<h5 class="card-title">' + elem.title + "</h5>";
+  str += '<p class="card-text">' + elem.desc + "</p>";
+  str += "</div>";
   str +=
-    '<h5 class="card-title">' +
-    // elem.title +
-    // (elem.pdf != ""
-    //   ? ' <img src="https://img.icons8.com/office/30/null/pdf.png" data-bs-target="#modal' + key + '" style="cursor:pointer"></img>'
-    //   : "");
-    elem.title +
+    '<div class="card-footer text-muted">' +
     (elem.pdf != ""
-      ? ' <i data-mdb-toggle="modal" style="cursor: pointer;color:rgb(166, 77, 77)" data-mdb-target="#myModal' +
-        key +
-        '" class="fas fa-file-pdf"></i>'
-      : "");
-  str += '</h5><p class="card-text">' + elem.desc + "</p>";
+      ? 'View PDF  <a style="color: #dd4b39;" role="button"><i class="fas fa-file-pdf" data-mdb-toggle="modal" data-mdb-target="#pdviewerModal" onclick="viewPDF(\'' +
+        elem.title +
+        " | " +
+        elem.desc +
+        "' ,'" +
+        elem.pdf +
+        "');\"></i></a>"
+      : "-NO PDF-") +
+    "</div>";
   str += "</div>";
   str += "</div>";
-  str += "</div>";
-
-  if (elem.pdf != "") {
-    str += '<div class="modal fade" id="myModal' + key + '">';
-    str += '<div class="modal-dialog modal-xl">';
-    str += '<div class="modal-content">';
-    str += '  <div class="modal-header">';
-    str += '     <h5 class="modal-title">' + elem.title + "<br/>" + elem.desc + "</h5>";
-    str += '    <button type="button" class="btn-close" data-mdb-dismiss="modal"></button>';
-    str += "</div>";
-    str += '<div class="modal-body">';
-    str += '   <iframe loading="lazy" src="' + elem.pdf + '" width="100%" height="600px"></iframe>';
-    //str += "<object loading='lazy'  data=" + elem.url + "></object>";
-    str += "</div>";
-    str += "</div>";
-    str += "</div>";
-    str += "</div>";
-  }
 
   return str;
 }
@@ -93,15 +77,16 @@ const scrollTop = function () {
   window.addEventListener("scroll", scrollBtnDisplay);
 
   const scrollWindow = function () {
-    // if (window.scrollY != 0) {
-    //   setTimeout(function () {
-    //     window.scrollTo(0, window.scrollY - 350);
-    //     scrollWindow();
-    //   }, 10);
-    // }
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
   scrollBtn.addEventListener("click", scrollWindow);
 };
 scrollTop();
+
+function viewPDF(title, pdf) {
+  let iframe = document.getElementById("pdfViewer");
+  let pdftitle = document.getElementById("pdfviewerTitle");
+  pdftitle.innerHTML = title;
+  iframe.setAttribute("src", pdf);
+}
