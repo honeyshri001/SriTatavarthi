@@ -1,13 +1,3 @@
-/* const navLinks = document.querySelectorAll(".nav-item");
-const menuToggle = document.getElementById("navbarSupportedContent");
-const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
-navLinks.forEach((l) => {
-  l.addEventListener("click", () => {
-    bsCollapse.toggle();
-  });
-}); */
-
-//var jsonFilePath = "https://drive.google.com/file/d/13i9MJDaxYJ7-U_R4x-uYqSXF4wACDY_J/view"; //../data/data.json
 var jsonFilePath = "../data/data.json";
 
 $.getJSON(jsonFilePath, {
@@ -88,7 +78,8 @@ let anotherPDF;
 WebViewer(
   {
     path: "/lib", // path to the PDF.js Express'lib' folder on your server
-    licenseKey: "jSRLl6oLxSMaH9H8r786",
+    //licenseKey: "jSRLl6oLxSMaH9H8r786", // localhost
+    licenseKey: "tKFsD7kxViaz7RlwUIP2", //netlify
     initialDoc: "",
     // initialDoc: '/path/to/my/file.pdf',  // You can also use documents on your server
   },
