@@ -49,13 +49,13 @@ function template1(elem, key) {
   str +=
     '<div class="card-footer text-muted">' +
     (elem.pdf != ""
-      ? 'View PDF  <a style="color: #dd4b39;" role="button"><i class="fas fa-file-pdf" data-mdb-toggle="modal" data-mdb-target="#pdviewerModal" onclick="viewPDF(\'' +
+      ? '<a style="color: #dd4b39;" role="button" data-mdb-toggle="modal" data-mdb-target="#pdviewerModal" onclick="viewPDF(\'' +
         elem.title +
         " | " +
         elem.desc +
-        "' ,'" +
+        "','" +
         elem.pdf +
-        "');\"></i></a>"
+        '\');"> View PDF  <i class="fas fa-file-pdf fa-lg"></i></a>'
       : "-NO PDF-") +
     "</div>";
   str += "</div>";
@@ -84,17 +84,22 @@ const scrollTop = function () {
 };
 scrollTop();
 
+let anotherPDF;
+WebViewer(
+  {
+    path: "/lib", // path to the PDF.js Express'lib' folder on your server
+    licenseKey: "jSRLl6oLxSMaH9H8r786",
+    initialDoc: "",
+    // initialDoc: '/path/to/my/file.pdf',  // You can also use documents on your server
+  },
+  document.getElementById("viewer")
+).then((instance) => {
+  anotherPDF = instance;
+  instance.UI.setTheme("dark");
+});
+
 function viewPDF(title, pdf) {
-  //let url = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://honeyshri001.github.io/SriTatavarthi/" + pdf;
-
-  let url = "https://drive.google.com/viewerng/viewer?embedded=true&url=" + encodeURIComponent("https://honeyshri001.github.io/SriTatavarthi/" + pdf);
-
-  let iframe = document.getElementById("pdfViewer");
   let pdftitle = document.getElementById("pdfviewerTitle");
   pdftitle.innerHTML = title;
-  iframe.setAttribute("src", url);
-
-  iframe.contentWindow.onload = function () {
-    this.document.getElementsByTagName("img")[0].style.width = "100%";
-  };
+  anotherPDF.UI.loadDocument("/" + pdf);
 }
