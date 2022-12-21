@@ -85,8 +85,10 @@ const scrollTop = function () {
 scrollTop();
 
 function viewPDF(title, pdf) {
+  let url = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://honeyshri001.github.io/SriTatavarthi/" + pdf;
+
   let iframe = document.getElementById("pdfViewer");
   let pdftitle = document.getElementById("pdfviewerTitle");
   pdftitle.innerHTML = title;
-  iframe.setAttribute("src", pdf);
+  iframe.setAttribute("src", url);
 }
