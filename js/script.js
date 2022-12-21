@@ -85,10 +85,15 @@ const scrollTop = function () {
 scrollTop();
 
 function viewPDF(title, pdf) {
-  let url = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://honeyshri001.github.io/SriTatavarthi/" + pdf;
+  //let url = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://honeyshri001.github.io/SriTatavarthi/" + pdf;
+  let url = pdf;
 
   let iframe = document.getElementById("pdfViewer");
   let pdftitle = document.getElementById("pdfviewerTitle");
   pdftitle.innerHTML = title;
   iframe.setAttribute("src", url);
+
+  iframe.contentWindow.onload = function () {
+    this.document.getElementsByTagName("img")[0].style.width = "100%";
+  };
 }
