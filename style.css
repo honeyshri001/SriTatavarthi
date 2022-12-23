@@ -44,7 +44,7 @@ h2 {
   border: 0px solid red;
   background: #f8d8af;
   background: radial-gradient(circle, #f8f3f3 15%, #f8d8af 20%);
-  padding-top: 4.5rem !important;
+  padding-top: 0.5rem !important;
 }
 .hero-img1:hover {
   color: #111;
