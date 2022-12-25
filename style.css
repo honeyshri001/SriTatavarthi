@@ -1,11 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Dhurjati&family=Ramaraja&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
 body {
+  min-height: 100vh;
   font-family: "Ramaraja", sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
   background-color: #f6c88fb4;
 }
+
+input,
+text,
+button,
+select {
+  font: inherit;
+}
+
 h3 {
   color: #6501de;
   text-shadow: rgba(0, 255, 162, 0.93) 0px 0px 39px;
@@ -43,8 +64,8 @@ h2 {
 .hero {
   border: 0px solid red;
   background: #f8d8af;
-  background: radial-gradient(circle, #f8f3f3 15%, #f8d8af 20%);
-  padding-top: 0.5rem !important;
+  background: radial-gradient(circle, #f8f3f3 32%, #f8d8af 40%);
+  padding-top: 7rem !important;
 }
 .hero-img1:hover {
   color: #111;
