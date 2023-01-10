@@ -74,9 +74,13 @@ const scrollTop = function () {
 };
 scrollTop();
 
-$(".nav-link").click(function () {
-  $(".navbar-collapse").collapse("hide");
-});
+// $(window).scroll(function () {
+//   $(".navbar-collapse").collapse("hide");
+// });
+
+// $(".nav-link").click(function () {
+//   $(".navbar-collapse").collapse("hide");
+// });
 
 let anotherPDF;
 WebViewer(
