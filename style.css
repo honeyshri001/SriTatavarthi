@@ -36,6 +36,18 @@ h2 {
   text-shadow: 0px 9px 8px #ce5937;
   color: #111;
 }
+
+canvas {
+  border: 0px solid silver;
+  /* height: 16rem;
+  width: 18rem; */
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-top-left-radius: calc(0.5rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
+  align-items: center;
+}
+
 .nav-link {
   letter-spacing: 1.2px;
   font-size: 1.2rem;
@@ -64,7 +76,7 @@ h2 {
 .hero {
   border: 0px solid red;
   background: #f8d8af;
-  background: radial-gradient(circle, #f8f3f3 3%, #f8d8af 40%);
+  /* background: radial-gradient(circle, #f8f3f3 3%, #f8d8af 40%); */
   padding-top: 5rem !important;
 }
 .hero-img1:hover {
