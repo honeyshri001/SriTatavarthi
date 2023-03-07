@@ -23,8 +23,10 @@ function LoadThumbnail(obj) {
   var canvas = document.createElement("canvas");
   canvas.id = elementID;
 
-  var url = "https://cors-anywhere.herokuapp.com/https://honeyshri001.github.io/SriTatavarthi/pdf/sanchika/" + obj.url;
-  var url2 = "https://honeyshri001.github.io/SriTatavarthi/pdf/" + obj.url;
+  //var url = "https://cors-anywhere.herokuapp.com/https://honeyshri001.github.io/SriTatavarthi/pdf/sanchika/" + obj.url;
+  //var url2 = "https://honeyshri001.github.io/SriTatavarthi/pdf/" + obj.url;
+
+  var url = "../pdf/sanchika/" + obj.url;
 
   // Loaded via <script> tag, create shortcut to access PDF.js exports.
   var pdfjsLib = window["pdfjs-dist/build/pdf"];

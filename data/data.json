@@ -40,8 +40,16 @@
         "type": 2,
         "url": "https://youtube.com/embed/bTFbwfSbUCs",
         "title": "అవదానం #1",
-        "desc": "హరిణి శతకం | Smt. Harini Choppakatla",
+        "desc": "TESTING",
         "pdf":""
+      }
+      ,
+      {
+        "type": 2,
+        "url": "https://youtube.com/embed/bTFbwfSbUCs",
+        "title": "TESTING",
+        "desc": "TESTING",
+        "pdf":"pdf/Cover-Page.pdf"
       }
     ]
   }
