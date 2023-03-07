@@ -83,7 +83,7 @@ function LoadThumbnail(obj) {
 
   divBody.innerHTML = '<h5 class="card-title">' + obj.title + "</h5>";
   divBody.innerHTML += '<p class="card-text">' + obj.desc + "</p>";
-  divBody.innerHTML += '<a href="' + url2 + '" target="_blank" class="btn btn-primary">Read</a></a>';
+  divBody.innerHTML += '<a href="' + url + '" target="_blank" class="btn btn-primary">Read</a></a>';
 
   //canvas.className = "card-img card-img-top";
   section.appendChild(div);
