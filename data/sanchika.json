@@ -14,17 +14,30 @@
         "desc": "April 2023"
       },
       {
+        "id": 5,
+        "url": "pamphlet.pdf",
+        "title": "సంచిక #5",
+        "desc": "June 2023"
+      },
+      {
+        "id": 6,
+        "url": "pamphlet.pdf",
+        "title": "సంచిక #6",
+        "desc": "June 2023"
+      },
+      {
         "id": 3,
         "url": "sanchika-3.pdf",
         "title": "సంచిక #3",
         "desc": "May 2023"
       },
       {
-        "id": 3,
+        "id": 4,
         "url": "pamphlet.pdf",
-        "title": "సంచిక #3",
+        "title": "సంచిక #4",
         "desc": "June 2023"
       }
+
     
       ]
 }
