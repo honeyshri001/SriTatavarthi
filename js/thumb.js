@@ -22,7 +22,7 @@ $.getJSON(jsonFilePath, {
 
     $.each(data.data, function (key, val) {
       if (i < 3) $("#divSancikalu").append(LoadThumbnail(val));
-      if (page == "index.html") i++;
+      if (page != "magazine.html") i++;
     });
 
     document.getElementById("badge_canvas0").innerHTML += getBadge();
