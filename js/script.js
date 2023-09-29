@@ -87,7 +87,7 @@ WebViewer(
   {
     path: "/lib", // path to the PDF.js Express'lib' folder on your server
     //licenseKey: "jSRLl6oLxSMaH9H8r786", // localhost
-    licenseKey: "j1YM85wFDtrcI0Nf1UzC", //https://sritatavarthy.com/
+    licenseKey: "Y0KVV6SsbYU2oZNaOkX8", //https://sritatavarthy.com/
     initialDoc: "",
     // initialDoc: '/path/to/my/file.pdf',  // You can also use documents on your server
   },
